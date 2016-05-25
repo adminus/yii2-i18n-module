@@ -1,10 +1,10 @@
 <?php
 
-namespace Zelenin\yii\modules\I18n;
+namespace Adminus\yii\modules\I18n;
 
 use Yii;
 use yii\i18n\MissingTranslationEvent;
-use Zelenin\yii\modules\I18n\models\SourceMessage;
+use Adminus\yii\modules\I18n\models\SourceMessage;
 
 class Module extends \yii\base\Module
 {
@@ -12,7 +12,7 @@ class Module extends \yii\base\Module
 
     public static function t($message, $params = [], $language = null)
     {
-        return Yii::t('zelenin/modules/i18n', $message, $params, $language);
+        return Yii::t('adminus/modules/i18n', $message, $params, $language);
     }
 
     /**
