@@ -1,12 +1,12 @@
 <?php
 
-namespace Zelenin\yii\modules\I18n\models;
+namespace Adminus\yii\modules\I18n\models;
 
 use Yii;
 use yii\base\InvalidConfigException;
 use yii\db\ActiveRecord;
-use Zelenin\yii\modules\I18n\models\query\SourceMessageQuery;
-use Zelenin\yii\modules\I18n\Module;
+use Adminus\yii\modules\I18n\models\query\SourceMessageQuery;
+use Adminus\yii\modules\I18n\Module;
 
 class SourceMessage extends ActiveRecord
 {
