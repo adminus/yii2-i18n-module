@@ -6,11 +6,11 @@
 
 use yii\helpers\Html;
 use yii\web\View;
-use Zelenin\yii\modules\I18n\models\SourceMessage;
-use Zelenin\yii\modules\I18n\Module;
-use Zelenin\yii\SemanticUI\collections\Breadcrumb;
-use Zelenin\yii\SemanticUI\Elements;
-use Zelenin\yii\SemanticUI\widgets\ActiveForm;
+use Adminus\yii\modules\I18n\models\SourceMessage;
+use Adminus\yii\modules\I18n\Module;
+use Adminus\yii\SemanticUI\collections\Breadcrumb;
+use Adminus\yii\SemanticUI\Elements;
+use Adminus\yii\SemanticUI\widgets\ActiveForm;
 
 $this->title = Module::t('Update') . ': ' . $model->message;
 echo Breadcrumb::widget(['links' => [
