@@ -11,13 +11,13 @@ The preferred way to install this extension is through [Composer](http://getcomp
 Either run
 
 ```
-php composer.phar require zelenin/yii2-i18n-module "dev-master"
+php composer.phar require adminus/yii2-i18n-module "dev-master"
 ```
 
 or add
 
 ```
-"zelenin/yii2-i18n-module": "dev-master"
+"adminus/yii2-i18n-module": "dev-master"
 ```
 
 to the require section of your ```composer.json```
@@ -28,8 +28,8 @@ Configure I18N component in common config:
 
 ```php
 'i18n' => [
-	'class' => Zelenin\yii\modules\I18n\components\I18N::className(),
-	'languages' => ['ru-RU', 'de-DE', 'it-IT']
+	'class' => Adminus\yii\modules\I18n\components\I18N::className(),
+	'languages' => ['ru-RU', 'en-EN']
 ],
 ```
 
@@ -37,14 +37,14 @@ Configure I18N component in backend config:
 
 ```php
 'modules' => [
-	'i18n' => Zelenin\yii\modules\I18n\Module::className()
+	'i18n' => Adminus\yii\modules\I18n\Module::className()
 ],
 ```
 
 Run:
 
 ```
-php yii migrate --migrationPath=@Zelenin/yii/modules/I18n/migrations
+php yii migrate --migrationPath=@Adminus/yii/modules/I18n/migrations
 ```
 
 Go to ```http://backend.yourdomain.com/translations``` for translating your messages
@@ -66,10 +66,10 @@ where ```@common/messages``` is path for app translations
 Run:
 
 ```
-php yii i18n/export @Zelenin/yii/modules/I18n/messages zelenin/modules/i18n
+php yii i18n/export @Adminus/yii/modules/I18n/messages zelenin/modules/i18n
 ```
 
-where ```@Zelenin/yii/modules/I18n/messages``` is path for app translations and ```zelenin/modules/i18n``` is translations category in DB
+where ```@Adminus/yii/modules/I18n/messages``` is path for app translations and ```adminus/modules/i18n``` is translations category in DB
 
 ### Using ```yii``` category with DB
 
@@ -83,8 +83,8 @@ Configure I18N component:
 
 ```php
 'i18n' => [
-    'class'=> Zelenin\yii\modules\I18n\components\I18N::className(),
-    'languages' => ['ru-RU', 'de-DE', 'it-IT'],
+    'class'=> Adminus\yii\modules\I18n\components\I18N::className(),
+    'languages' => ['ru-RU', 'en-EN'],
     'translations' => [
         'yii' => [
             'class' => yii\i18n\DbMessageSource::className()
