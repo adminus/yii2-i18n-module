@@ -8,9 +8,9 @@ use yii\helpers\Html;
 use yii\web\View;
 use Adminus\yii\modules\I18n\models\SourceMessage;
 use Adminus\yii\modules\I18n\Module;
-use Adminus\yii\SemanticUI\collections\Breadcrumb;
-use Adminus\yii\SemanticUI\Elements;
-use Adminus\yii\SemanticUI\widgets\ActiveForm;
+use Zelenin\yii\SemanticUI\collections\Breadcrumb;
+use Zelenin\yii\SemanticUI\Elements;
+use Zelenin\yii\SemanticUI\widgets\ActiveForm;
 
 $this->title = Module::t('Update') . ': ' . $model->message;
 echo Breadcrumb::widget(['links' => [
@@ -27,7 +27,10 @@ echo Breadcrumb::widget(['links' => [
             <div class="ui grid">
                 <?php foreach ($model->messages as $language => $message) : ?>
                     <div class="four wide column">
-                        <?= $form->field($model->messages[$language], '[' . $language . ']translation')->label($language) ?>
+                        <?= $form->field($model->messages[$language], '[' . $language . ']translation')
+                            ->label($language)
+                            ->textarea(['class' => 'form-control'])
+                        ?>
                     </div>
                 <?php endforeach; ?>
             </div>
